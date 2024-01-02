@@ -9,13 +9,6 @@ Page({
 
   },
 
-  updateBadge(){
-    this.getTabBar().updateCount((app.globalData.tablist[0].info)*1+1,0)
-  },
-  clearBadge(){
-    this.getTabBar().updateCount("",0)
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
