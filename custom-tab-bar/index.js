@@ -1,5 +1,6 @@
 // custom-tab-bar/index.js
-import TabMenu from './data';
+
+const app = getApp()
 Component({
 
   /**
@@ -14,7 +15,7 @@ Component({
    */
   data: {
     active: 0,
-    list: TabMenu,
+    list: app.globalData.tablist,
   },
 
   /**
@@ -38,7 +39,11 @@ Component({
           (item.url.startsWith('/') ? item.url.substr(1) : item.url) ===
           `${route}`,
       );
-      this.setData({ active });
+      this.setData({ active:active, list:app.globalData.tablist});
     },
+    updateCount(count,index){
+      app.globalData.tablist[index].info = count
+      this.setData({list:app.globalData.tablist})//更新数组里的某一项的字段
+    }
   }
 })
