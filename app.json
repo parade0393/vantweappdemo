@@ -5,7 +5,8 @@
     "pages/cart/index",
     "pages/usercenter/index",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/demo/index"
   ],
   "tabBar": {
     "custom": true,
@@ -14,6 +15,10 @@
     "backgroundColor": "#ffffff",
     "borderStyle": "black",
     "list": [
+      {
+        "pagePath": "pages/demo/index",
+        "text": "演示"
+      },
       {
         "pagePath": "pages/home/index",
         "text": "首页"

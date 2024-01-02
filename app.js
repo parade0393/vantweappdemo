@@ -18,6 +18,14 @@ App({
     tablist:[
       {
         icon: 'home-o',
+        text: '演示',
+        url: 'pages/demo/index',
+        selectIcon:"/static/image/demo_s.svg",
+        normalIcon:"/static/image/demo_n.svg",
+        info:""
+      },
+      {
+        icon: 'home-o',
         text: '首页',
         url: 'pages/home/index',
         selectIcon:"/static/image/home_s.svg",
