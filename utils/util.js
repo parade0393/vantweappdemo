@@ -14,6 +14,37 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+ const showToast = function(content,duration) {
+  if(!duration) duration = 2000
+  wx.showToast({
+      title: content,
+      icon: 'none',
+      duration: duration,
+  })
+}
+
+var isShowLoading = false
+ const showLoading = function(title) {
+  if(isShowLoading) return
+  wx.showLoading({
+      title: title?title:'',
+      mask:true,
+      success:()=>{
+          isShowLoading = true
+      }
+  })
+}
+
+ const hideLoading = function() {
+  if(!isShowLoading) return
+  isShowLoading = false
+  wx.hideLoading()
+}
+
+
 module.exports = {
-  formatTime
+  formatTime,
+  showLoading,
+  hideLoading,
+  showToast
 }

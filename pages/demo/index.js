@@ -1,5 +1,6 @@
 
 const app = getApp()
+const service   = require("../../services/request")
 Page({
 
   /**
@@ -14,6 +15,23 @@ Page({
   },
   clearBadge(){
     this.getTabBar().updateCount("",0)
+  },
+  showLoading(){
+    wx.showLoading({
+      title: '加载中···',
+      mask:true
+    })
+  },
+  hideloading(){
+    wx.hideLoading()
+  },
+
+  fetchData(){
+    service.get('/banner/json',{showLoading:true}).then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    })
   },
 
   /**
