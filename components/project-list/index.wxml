@@ -1,5 +1,5 @@
 <!--components/project-list/index.wxml-->
-<view class="project-list-wrap">
+<view class="project-list-wrap wr-class">
   <block wx:for="{{projectList}}" wx:key="id">
     <project-card project="{{item}}"/>
   </block>

@@ -1,4 +1,21 @@
 <!--components/project-card/index.wxml-->
 <view class="project-card">
-<text wx:if="{{project.desc}}">{{project.desc}}</text>
+  <view class="project-card_main">
+    <view class="project-card__thumb">
+      <van-image custom-class="item-image" wx:if="{{project.envelopePic}}" src="{{project.envelopePic}}" />
+    </view>
+    <view class="project-card__body">
+      <view class="body-title" wx:if="{{project.title}}"> 
+        {{project.title}}
+      </view>
+      <view class="body-down">
+        <view class="body-down_author" wx:if="{{project.author}}">
+          {{project.author}}
+        </view>
+        <view class="body-down_time" wx:if="{{project.publishTime}}">
+        {{project.publishTime}}
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

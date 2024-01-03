@@ -1,1 +1,48 @@
 /* components/project-card/index.wxss */
+.project-card{
+  box-sizing: border-box;
+  font-size: 24rpx;
+  border-radius:  16rpx;
+}
+.project-card_body{
+  font-size: 28rpx;
+  color: #333;
+}
+.project-card_main{
+  position: relative;
+  display: flex;
+  line-height: 1;
+  padding: 0;
+  background: transparent;
+  width: 342rpx;
+  border-radius: 0 0 16rpx 16rpx;
+  /* align-items: center; */
+  justify-content: center;
+  margin-bottom: 16rpx;
+  flex-direction: column;
+}
+.project-card__thumb{
+  flex-shrink: 0;
+  position: relative;
+  width: 340rpx;
+  height: 340rpx;
+}
+.item-image{
+  width: 100%;
+  height: 340rpx;
+}
+.body-title{
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-word;
+  margin: 16rpx 0;
+}
+.body-down_author{
+  font-size: 28rpx;
+  color: #333;
+}

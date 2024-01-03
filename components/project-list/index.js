@@ -1,5 +1,6 @@
 
 Component({
+  externalClasses: ['wr-class'],
   properties: {
     projectList:{
       type:Array,
