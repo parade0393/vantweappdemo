@@ -1,7 +1,9 @@
  const baseurl  = "https://www.wanandroid.com"
 
  const api = {
-   bannerUrl:"/banner/json"
+   bannerUrl:"/banner/json",
+   projectTab:"/project/tree/json",
+   projectList:"/project/list",//project/list/1/json
  }
 module.exports = {
   baseurl,

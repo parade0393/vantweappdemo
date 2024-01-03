@@ -3,7 +3,11 @@
     "van-button": "@vant/weapp/button/index",
     "van-search": "@vant/weapp/search/index",
     "van-switch": "@vant/weapp/switch/index",
-    "van-image": "@vant/weapp/image/index"
+    "van-image": "@vant/weapp/image/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "project-list":"/components/project-list/index"
   },
   "navigationBarTitleText":"首页",
   "enablePullDownRefresh": true,

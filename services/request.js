@@ -32,6 +32,14 @@ function request(url,obj){
           'token': wx.getStorageSync('token') //获取保存的token
         },
         success:function(res){
+          if(obj.showLog){
+            console.log('===============================================================================================')
+            console.log('==    接口地址：' + url);
+            console.log('==    接口参数：' + JSON.stringify(data));
+            console.log('==    请求类型：' + obj.method);
+            console.log("==    接口状态：" + res.statusCode);
+            console.log('===============================================================================================')
+          }
           if(res.statusCode == 200){
             if(res.data.errorCode === 0){
                 resolve(res.data.data)

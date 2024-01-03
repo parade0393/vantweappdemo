@@ -1,0 +1,4 @@
+<!--components/project-card/index.wxml-->
+<view class="project-card">
+<text wx:if="{{project.desc}}">{{project.desc}}</text>
+</view>

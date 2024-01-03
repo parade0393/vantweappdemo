@@ -1,18 +1,30 @@
 <!--pages/home/index.wxml-->
-
+<view style="text-align: center; color: #b9b9b9" wx:if="{{pageLoading}}">
+  <van-loading type="spinner" vertical>加载中···</van-loading>
+</view>
 <view class="home-page-header">
   <view class="search">
-    <van-search disabled  placeholder="iphone13火热发售中"  shape="round"/>
+    <van-search disabled placeholder="iphone13火热发售中" shape="round" />
   </view>
 
   <view class="swiper-wrap">
-    <swiper class="swiper" wx:if="{{banners.length>0}}" indicator-dots="{{true}}"
-        autoplay="{{true}}" circular="{{true}}">
-        <block wx:for="{{banners}}" wx:key="*this">
-          <swiper-item class="swiper-item">
-              <van-image custom-class="swiper-item-content" image-class="image-swipper" src="{{item.imagePath}}" />
-          </swiper-item>
-        </block>
-      </swiper>
+    <swiper class="swiper" wx:if="{{banners.length>0}}" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}">
+      <block wx:for="{{banners}}" wx:key="id">
+        <swiper-item class="swiper-item">
+          <van-image custom-class="swiper-item-content" image-class="image-swipper" src="{{item.imagePath}}" />
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
+</view>
+
+<view class="home-page-container">
+  <view class="home-page-tabs">
+    <van-tabs ellipsis="{{false}}" wx:if="{{tabs.length>0}}"  active="{{ tabActive }}" bind:change="onTabChange">
+    <block wx:for="{{tabs}}" wx:key="id">
+      <van-tab title="{{item.name}}"></van-tab>
+    </block>
+    </van-tabs>
+  </view>
+  <project-list projectList="{{list}}"/>
 </view>
