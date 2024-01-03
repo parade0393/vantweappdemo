@@ -1,5 +1,5 @@
 <!--pages/home/index.wxml-->
-<view>
- 
+<view class="home-page-header">
+  <van-search disabled  placeholder="iphone13火热发售中"  shape="round"/>
 
 </view>

@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/demo/index",
     "pages/home/index",
     "pages/goods/category/index",
     "pages/cart/index",
     "pages/usercenter/index",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/demo/index"
+    "pages/logs/logs"
   ],
   "tabBar": {
     "custom": true,
