@@ -1,1 +1,23 @@
 /* pages/home/index.wxss */
+page {
+  box-sizing: border-box;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 96rpx);
+}
+
+.home-page-container,
+.home-page-header {
+  display: block;
+  padding: 0 24rpx;
+}
+
+.home-page-header .swiper-wrap .swiper {
+  width: 100%;
+  height: 300rpx;
+}
+.home-page-header .swiper-wrap .swiper-item-content{
+  width: 100%;
+  height: 100%;
+}
+.home-page-header .swiper-wrap .image-swipper{
+  border-radius: 20rpx;
+}

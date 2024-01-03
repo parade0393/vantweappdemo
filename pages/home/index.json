@@ -2,7 +2,10 @@
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
     "van-search": "@vant/weapp/search/index",
-    "van-switch": "@vant/weapp/switch/index"
+    "van-switch": "@vant/weapp/switch/index",
+    "van-image": "@vant/weapp/image/index"
   },
-  "navigationBarTitleText":"首页"
+  "navigationBarTitleText":"首页",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 10
 }

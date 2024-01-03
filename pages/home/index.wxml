@@ -1,5 +1,18 @@
 <!--pages/home/index.wxml-->
-<view class="home-page-header">
-  <van-search disabled  placeholder="iphone13火热发售中"  shape="round"/>
 
+<view class="home-page-header">
+  <view class="search">
+    <van-search disabled  placeholder="iphone13火热发售中"  shape="round"/>
+  </view>
+
+  <view class="swiper-wrap">
+    <swiper class="swiper" wx:if="{{banners.length>0}}" indicator-dots="{{true}}"
+        autoplay="{{true}}" circular="{{true}}">
+        <block wx:for="{{banners}}" wx:key="*this">
+          <swiper-item class="swiper-item">
+              <van-image custom-class="swiper-item-content" image-class="image-swipper" src="{{item.imagePath}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
 </view>
