@@ -9,7 +9,7 @@ Component({
       type:Object,
       value:{id:""},
       observer:(value)=>{
-         
+        
       }
     }
   },
@@ -25,6 +25,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    
   }
 })

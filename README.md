@@ -1,0 +1,1 @@
+使用dayjs插件，需要手动把插件拷贝到miniprogram_npm文件夹下

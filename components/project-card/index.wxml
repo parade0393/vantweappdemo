@@ -13,7 +13,7 @@
           {{project.author}}
         </view>
         <view class="body-down_time" wx:if="{{project.publishTime}}">
-        {{project.publishTime}}
+        {{project.publickTimeText}}
         </view>
       </view>
     </view>

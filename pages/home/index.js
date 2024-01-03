@@ -1,5 +1,6 @@
 const config = require("../../config/index")
 const service = require("../../services/request")
+const utils = require("../../utils/util")
 const app = getApp()
 Page({
   data: {
@@ -69,6 +70,9 @@ Page({
   loadArticleList(){
     const id = this.data.tabs[this.data.tabActive].id
     service.get(config.api.projectList+"/"+this.projectPage.page+"/json",{"data":{"cid":id,"page_size":this.projectPage.num}}).then(res => {
+      res.datas.forEach(el => {
+        el.publickTimeText = utils.dayjs().to(utils.dayjs(el.publishTime))
+      })
       const newList = this.projectPage.page == 1 ? res.datas:this.data.list.concat(res.datas)
       this.setData({
         list:newList
