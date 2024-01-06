@@ -1,0 +1,21 @@
+<view class="load-more wr-class" style="{{listIsEmpty && (status === 0 || status === 2) ? 'display: none' : '' }}" bindtap="tapHandle">
+  <!-- 加载中 -->
+
+  <van-loading custom-class="t-class-loading" wx:if="{{status === 1}}" type="spinner" size="40rpx">加载中···</van-loading>
+
+  <!-- 已全部加载 -->
+  <van-divider contentPosition="center" wx:if="{{status === 0 && !listIsEmpty}}">
+    <text>{{noMoreText}}</text>
+  </van-divider>
+
+  <!-- 加载失败 -->
+  <view class="load-more__error" wx:if="{{status===2}}">
+    加载失败
+    <text class="load-more__refresh-btn" bind:tap="tapHandle">刷新</text>
+  </view>
+</view>
+
+<!-- 支持通过slot传入页面/列表的空态，load-more来控制空态的显示状态 -->
+<view wx:if="{{listIsEmpty && (status === 0)}}" class="no-more wr-class--no-more">
+  <slot name="empty"></slot>
+</view>

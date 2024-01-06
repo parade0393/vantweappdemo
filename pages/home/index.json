@@ -2,14 +2,18 @@
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
     "van-search": "@vant/weapp/search/index",
-    "van-switch": "@vant/weapp/switch/index",
     "van-image": "@vant/weapp/image/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "van-loading": "@vant/weapp/loading/index",
-    "project-list":"/components/project-list/index"
+    "project-list":"/components/project-list/index",
+    "load-more":"/components/load-more/index",
+    "empty-view":"/components/empty-view/index",
+    "home-navigation-bar":"/components/navigation-bar/navigation-bar",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-icon": "@vant/weapp/icon/index"
   },
-  "navigationBarTitleText":"首页",
+  "navigationStyle": "custom",
   "enablePullDownRefresh": true,
   "onReachBottomDistance": 10
 }

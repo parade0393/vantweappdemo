@@ -5,14 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    count:1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+   
+  },
 
+  increaceCount(){
+    console.log("increace");
+    this.setData({
+      count:++this.data.count
+    })
   },
 
   /**
@@ -62,5 +69,5 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
 })

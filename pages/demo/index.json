@@ -1,6 +1,10 @@
 {
   "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index"
+
   },
-  "navigationBarTitleText":"演示"
+  "navigationBarTitleText": "demo",
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black"
 }

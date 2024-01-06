@@ -34,6 +34,27 @@ Page({
     })
   },
 
+  getPhoneNumber(e){
+    if(e.code){
+      //授权成功，拿code去服务端置换手机号
+    }
+  },
+
+  updateTabBar(){
+    const userRole = app.globalData.userRole
+    let changeRole = ""
+    if(userRole){
+      if(userRole == "1"){
+        changeRole = "2"
+      }else{
+        changeRole = "1"
+      }
+    }else{
+      changeRole = "2"
+    }
+    this.getTabBar().updateTabbar(changeRole)
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

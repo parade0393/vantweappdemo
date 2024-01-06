@@ -21,3 +21,56 @@ page {
 .home-page-header .swiper-wrap .image-swipper{
   border-radius: 20rpx;
 }
+
+.home-bar-content{
+  margin-left: 28rpx;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+}
+
+.address_loacation-img {
+  width: 23rpx;
+  height: 26rpx;
+}
+
+.address_loacation-text {
+  color: #333;
+  font-size: 26rpx;
+  margin-left: 9rpx;
+}
+
+.bar_content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bar_content-inner {
+  box-sizing: border-box;
+  width: 80%;
+  height: 100%;
+  background-color: #F4F4F4;
+  border-radius: 27rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  display: flex;
+}
+
+.left_icon_class {
+  padding-left: 30rpx;
+  padding-right: 17rpx;
+  border-right: 1rpx solid #e2e2e2;
+}
+
+.bar_main {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #999999;
+  flex: 1;
+  display: flex;
+  padding-left: 21rpx;
+  align-items: center;
+}

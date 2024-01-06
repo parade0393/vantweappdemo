@@ -1,7 +1,8 @@
 Component({
   options: {
-    multipleSlots: true // 在组件定义时的选项中启用多slot支持
+    multipleSlots: true, // 在组件定义时的选项中启用多slot支持
   },
+  externalClasses:['wr-class'],
   /**
    * 组件的属性列表
    */
@@ -65,10 +66,12 @@ Component({
           const isAndroid = res.platform === 'android'
           const isDevtools = res.platform === 'devtools'
           this.setData({
+            menuHeight:`height:${rect.height}px`,
             ios: !isAndroid,
             innerPaddingRight: `padding-right: ${res.windowWidth - rect.left}px`,
             leftWidth: `width: ${res.windowWidth - rect.left }px`,
-            safeAreaTop: isDevtools || isAndroid ? `height: calc(var(--height) + ${res.safeArea.top}px); padding-top: ${res.safeArea.top}px` : ``
+            safeAreaTop:  `padding-top: ${res.safeArea.top}px`,
+            holderHeight:`height: calc(46px + ${res.safeArea.top}px)`
           })
         }
       })

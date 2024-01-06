@@ -1,0 +1,23 @@
+.load-more {
+  font-size: 24rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-more__error {
+  margin: auto;
+}
+
+.load-more__refresh-btn {
+  margin-left: 16rpx;
+  color: #fa4126;
+}
+.no-more{
+ display: flex;
+ justify-content: center;
+ margin-top: 50rpx;
+ color: #666666;
+}

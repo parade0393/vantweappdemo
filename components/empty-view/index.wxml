@@ -1,0 +1,4 @@
+<!--components/empty-view/index.wxml-->
+<view>
+  <van-empty description="{{description}}" />
+</view>

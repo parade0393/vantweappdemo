@@ -1,9 +1,12 @@
 
-<view>
-  <van-button type="default" bind:click="updateBadge">默认按钮</van-button>
-<van-button type="primary" bind:click="clearBadge">主要按钮</van-button>
-<van-button type="info" bind:click="showLoading">信息按钮</van-button>
-<van-button type="warning" bind:click="hideloading">警告按钮</van-button>
-<van-button type="danger" bind:click="fetchData">危险按钮</van-button>
 
+<view>
+  <van-nav-bar title="标题" left-text="返回"  left-arrow fixed placeholder/> 
+
+  <van-button type="default" bind:click="updateBadge">设置badge</van-button>
+  <van-button type="primary" bind:click="clearBadge">清除badge</van-button>
+  <van-button type="info" bind:click="showLoading">展示loading无法dismiss</van-button>
+  <van-button type="warning" bind:click="hideloading">dismiss loading</van-button>
+  <van-button type="info" bind:click="updateTabBar">修改tabbar</van-button>
+  <van-button type="danger" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber">获取手机号一键登录</van-button>
 </view>

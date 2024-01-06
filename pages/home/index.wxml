@@ -2,6 +2,27 @@
 <view style="text-align: center; color: #b9b9b9" wx:if="{{pageLoading}}">
   <van-loading type="spinner" vertical>加载中···</van-loading>
 </view>
+<!-- <van-nav-bar title="标题" left-text="返回" left-arrow fixed placeholder>
+ 
+</van-nav-bar> -->
+
+<home-navigation-bar wr-class="home-bar-content"  color="black" background="#FFF">
+  <view class="address">
+      <image class="address_loacation-img" src="/static/image/location.png" />
+      <text class="address_loacation-text">洛阳</text>
+    </view>
+
+    <view class="bar_content">
+      <view class="bar_content-inner">
+        <view class="conntent_left_icon">
+          <van-icon custom-class="left_icon_class" name="search" color="#CACACA" />
+        </view>
+        <view class="bar_main">
+          搜索关键字
+        </view>
+      </view>
+    </view>
+</home-navigation-bar>
 <view class="home-page-header">
   <view class="search">
     <van-search disabled placeholder="iphone13火热发售中" shape="round" />
@@ -27,4 +48,9 @@
     </van-tabs>
   </view>
   <project-list projectList="{{list}}"/>
+  <load-more list-is-empty="{{list.length<=0}}" status="{{listLoadStatus}}" bind:retry="onReTry">
+    <view slot="empty">
+      <empty-view />
+    </view>
+  </load-more>
 </view>
