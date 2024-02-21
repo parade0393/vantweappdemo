@@ -1,0 +1,8 @@
+<!--components/upload-single/index.wxml-->
+<view>
+  <van-uploader class="wr-class" name="{{name}}" max-size="{{ maxSize }}" file-list="{{ fileList }}" max-count="1" bind:after-read="afterRead" bind:delete="onDelete" 
+  use-before-read="{{true}}" bind:before-read="beforeRead" bind:oversize="onOversize">
+    <slot></slot>
+  </van-uploader>
+  <canvas id="myCanvas" type="2d" style="position: absolute; top: -2000px;left:0;"></canvas>
+</view>
