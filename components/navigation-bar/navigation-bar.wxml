@@ -1,6 +1,6 @@
-<view style="{{holderHeight}}">
+<view style="{{holderHeight}}" class="shadowBox">
 </view>
-<view class="weui-navigation-bar {{extClass}} weui-navigation-bar__inner {{ios ? 'ios' : 'android'}}" style="color: {{color}}; background: {{background}}; {{displayStyle}};  {{safeAreaTop}};">
+<view class="shadowBox weui-navigation-bar {{extClass}} weui-navigation-bar__inner {{ios ? 'ios' : 'android'}}" style="color: {{color}}; background: {{background}}; {{displayStyle}};  {{safeAreaTop}};">
   <view class="navigation-bar-content wr-class" style="{{innerPaddingRight}}">
 
   <slot></slot>
