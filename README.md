@@ -12,6 +12,7 @@
    2. 本项目使用了relativeTime和zh_cn插件,需要在miniprogram_npm下的dayjs文件夹下新建locale和plugin，并把node_modules下的相关两个插件的js拷贝miniprogram_npm下的dayjs下相关的文件夹
 
 5. 常见问题
+  * 页面转发给朋友和分享到朋友圈需要页面适配，特别是分享到朋友圈(因为限制比较多，所以需要根据场景值进行适配)
   * 小程序刚启动就switchTab可能会有问题，可尝试使用relaunch解决
   * 在js中调用当前页面的方法： const page = getCurrentPages().pop(),可以先这获取第一个页面
   * 新建一个组件后需要清理编译缓存
