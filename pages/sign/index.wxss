@@ -1,0 +1,24 @@
+.canvas {
+  height: 100vh;
+  width: 100vw;
+}
+
+.button-container {
+  display: flex;
+  position: absolute;
+  top: 16rpx;
+  right: 16rpx;
+}
+
+.button {
+  background: white;
+  color: #616161FF;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border: 1px solid #C9C9C9;
+  width: 150rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}

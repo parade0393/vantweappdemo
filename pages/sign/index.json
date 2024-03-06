@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "手写签名",
+  "pageOrientation": "landscape",
+  "enablePullDownRefresh": false,
+  "disableScroll": true
+}

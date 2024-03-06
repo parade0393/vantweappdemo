@@ -4,7 +4,8 @@
     "pages/home/index",
     "pages/goods/category/index",
     "pages/cart/index",
-    "pages/usercenter/index"
+    "pages/usercenter/index",
+    "pages/sign/index"
   ],
   "tabBar": {
     "custom": true,

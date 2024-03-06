@@ -1,0 +1,9 @@
+<canvas class="canvas" type="2d" id="myCanvas" bind:touchstart="bindtouchstart" capture-bind:touchmove="bindtouchmove" bind:touchend="bindtouchend"/>
+<cover-view class="row button-container">
+  <cover-view class="flex1 button " bind:tap='clear'>
+    清除
+  </cover-view>
+  <cover-view class="flex1 button margin-left-12" bind:tap='export'>
+    提交
+  </cover-view>
+</cover-view>
