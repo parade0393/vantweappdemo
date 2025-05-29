@@ -12,8 +12,16 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
+    const theme = wx.getStorageSync('theme') || 'light';
+     this.globalData.theme = theme;
+     
+     // 设置导航栏颜色
+     this.updateNavigationBarColor();
   },
   globalData: {
+    theme: 'light', // 默认主题：light或dark
+    themeChanged: false,
     userInfo: null,
     tablist:[
       {
@@ -62,5 +70,30 @@ App({
       normalIcon:"/static/image/category_n.svg",
     },
     userRole:"",//1是消费者，2是摄影师，空代消费者
-  }
+  },
+  switchTheme(theme) {
+    this.globalData.theme = theme;
+    this.globalData.themeChanged = true;
+    
+    // 保存主题设置到本地存储
+    wx.setStorageSync('theme', theme);
+    
+    // 更新导航栏颜色
+    this.updateNavigationBarColor();
+  },
+
+  updateNavigationBarColor() {
+    const theme = this.globalData.theme;
+    if (theme === 'dark') {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#333333'
+      });
+    } else {
+      wx.setNavigationBarColor({
+        frontColor: '#000000',
+        backgroundColor: '#ffffff'
+      });
+    }
+  },
 })

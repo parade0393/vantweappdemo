@@ -41,4 +41,11 @@
       })
     }
   ```
+  6. 样式(主题)
+  * 背景色使用bg-section类
+  * 阴影使用b-shadow类
+  * 字体颜色使用 color: var(--text-color);
+  * 内边距和外边使用padding-section类和margin-section
+  * vant其他组件的样式统一在app.wxss中修改，参考van-cell-group
+  * 页面数据有theme: 'light',themeClass: ''； 页面容器使用<view class="container {{themeClass}}"></view>；页面onLoad初始化themeUtil.watchThemeChange(this);
    

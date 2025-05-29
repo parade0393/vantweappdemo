@@ -1,5 +1,47 @@
-<!--pages/cart/index.wxml-->
-<view>
-购物车
+<!--pages/index/index.wxml-->
+<view class="container {{themeClass}}">
+  <view class="header">
+    <image class="logo" src="/static/images/logo.png" mode="aspectFit"></image>
+    <view class="title">主题切换示例</view>
+    <view class="subtitle">当前主题: {{theme === 'dark' ? '深色' : '浅色'}}</view>
+  </view>
 
+  <van-cell-group title="功能演示" inset border="{{false}}"  custom-class="{{theme === 'dark' ? 'cell-group-dark' : ''}}">
+    <van-cell 
+      title="主题设置" 
+      is-link 
+      link-type="navigateTo" 
+      url="/pages/settings/settings"
+      value="{{theme === 'dark' ? '深色' : '浅色'}}"
+      custom-class="{{theme === 'dark' ? 'cell-dark' : ''}}"
+    />
+    <van-cell 
+      title="主题详情" 
+      is-link 
+      border="{{false}}"
+      link-type="navigateTo" 
+      url="/pages/theme/theme"
+      custom-class="{{theme === 'dark' ? 'cell-dark' : ''}}"
+    />
+  </van-cell-group>
+
+  <view class="content padding-section">
+    <view class="card bg-section b-shadow">
+      <view class="card-title">主题切换演示</view>
+      <view class="card-content">
+        <view>这是一个演示主题切换功能的小程序。</view>
+        <view>您可以在设置页面切换深色和浅色主题。</view>
+      </view>
+    </view>
+
+    <view class="card bg-section b-shadow">
+      <view class="card-title">Vant Weapp 组件</view>
+      <view class="card-content">
+        <van-button type="primary" custom-class="demo-button">主要按钮</van-button>
+        <van-button type="info" custom-class="demo-button">信息按钮</van-button>
+        <van-button type="warning" custom-class="demo-button">警告按钮</van-button>
+        <van-button type="danger" custom-class="demo-button">危险按钮</van-button>
+      </view>
+    </view>
+  </view>
 </view>

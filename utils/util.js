@@ -1,7 +1,6 @@
 const dayjs = require('dayjs')
-const cn = require('dayjs/locale/zh-cn')
 dayjs.locale('zh-cn') // 全局使用
-var relativeTime = require('dayjs/plugin/relativeTime')
+var relativeTime = require('dayjs/plugin/relativeTime.js')
 dayjs.extend(relativeTime)
 const formatTime = date => {
   const year = date.getFullYear()

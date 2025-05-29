@@ -1,10 +1,85 @@
 
+@import './miniprogram_npm//@vant/weapp/common/index.wxss';
 page {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
     Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
     sans-serif;
 }
 
-.shadowBox{
-  box-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
+/* 全局样式 */
+page {
+  --primary-color: #1989fa;
+  --background-color: #f7f8fa;
+  --text-color: #323233;
+  --border-color: #ebedf0;
+  --active-color: #1989fa;
+  --disabled-color: #c8c9cc;
+  --white:#fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  --cell-text-color:var(--text-color);
+  --cell-group-title-color:var(--text-color);
+  --cell-background-color:var(--white);
+  --gap:16px;
+}
+
+/* 深色主题 */
+page .theme-dark {
+  --primary-color: #1989fa;
+  --background-color: #1c1c1e;
+  --text-color: #f5f5f5;
+  --border-color: #3a3a3c;
+  --active-color: #1989fa;
+  --disabled-color: #636366;
+  --cell-background-color:var(--white);
+  --cell-text-color:var(--text-color);
+  --cell-group-title-color:var(--text-color);
+  --white:#2c2c2e;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* 页面容器通用样式 */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* 卡片样式 */
+.card {
+  padding: var(--gap);
+  border-radius: 8px;
+}
+.padding-section{
+  padding: var(--gap);
+}
+.margin-section{
+  padding: var(--gap);
+}
+.bg-section{
+  background-color: var(--white);
+}
+
+.theme-dark .van-cell-group--inset{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.b-shadow{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.theme-dark .b-shadow{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 一下为重写vant组件样式 */
+.van-cell-group{
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }

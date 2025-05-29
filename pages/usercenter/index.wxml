@@ -1,5 +1,56 @@
-<!--pages/usercenter/index.wxml-->
-<view>
-个人中心
+<!--pages/settings/settings.wxml-->
+<view class="container {{themeClass}}">
+  <view class="header">
+    <view class="title">设置</view>
+  </view>
 
+  <van-cell-group title="主题设置" inset custom-class="{{theme === 'dark' ? 'cell-group-dark' : ''}}">
+    <van-cell 
+      title="深色模式" 
+      custom-class="{{theme === 'dark' ? 'cell-dark' : ''}}"
+    >
+      <van-switch 
+        checked="{{theme === 'dark'}}" 
+        bind:change="onThemeChange" 
+        active-color="#1989fa"
+        inactive-color="#e5e5e5"
+        size="24px"
+      />
+    </van-cell>
+  </van-cell-group>
+
+  <van-cell-group title="主题选择" inset custom-class="{{theme === 'dark' ? 'cell-group-dark' : ''}}">
+    <van-radio-group value="{{theme}}" bind:change="onRadioChange">
+      <van-cell 
+        title="浅色主题" 
+        clickable 
+        data-name="light" 
+        bind:click="onClickRadio"
+        custom-class="{{theme === 'dark' ? 'cell-dark' : ''}}"
+      >
+        <van-radio slot="right-icon" name="light" checked-color="#1989fa" />
+      </van-cell>
+      <van-cell 
+        title="深色主题" 
+        clickable 
+        data-name="dark" 
+        bind:click="onClickRadio"
+        custom-class="{{theme === 'dark' ? 'cell-dark' : ''}}"
+      >
+        <van-radio slot="right-icon" name="dark" checked-color="#1989fa" />
+      </van-cell>
+    </van-radio-group>
+  </van-cell-group>
+
+  <view class="theme-preview">
+    <view class="preview-title">主题预览</view>
+    <view class="preview-card {{theme === 'dark' ? 'preview-card-dark' : ''}}">
+      <view class="preview-card-title">{{theme === 'dark' ? '深色主题' : '浅色主题'}}</view>
+      <view class="preview-card-content">这是{{theme === 'dark' ? '深色' : '浅色'}}主题的预览效果</view>
+      <view class="preview-buttons">
+        <van-button type="primary" size="small" custom-class="preview-button">按钮</van-button>
+        <van-button type="info" size="small" custom-class="preview-button">按钮</van-button>
+      </view>
+    </view>
+  </view>
 </view>
