@@ -1,6 +1,11 @@
-<!--pages/goods/category/index.wxml-->
-<view>
-  <van-button bind:click="increaceCount" type="primary">主要按钮</van-button>
- {{count}}
-
+<!--pages/index/index.wxml-->
+<!-- 渐变背景容器 -->
+<view class="container {{themeClass}}" style="--status-bar-height:{{statusBarHeight}}px;--nav-height:{{navHeight}}px;--menu-right:{{menuRight}}px;--menu-top:{{menuTop}}px">
+  <view class="gradient-bg"></view>
+  <view class="bar">
+    <text>多福多寿水电费好客山东花费收到回复收到封建时代束带结发束带结发时代峰峻收到</text>
+  </view>
+  <view class="content">
+    <text>您的文字内容</text>
+  </view>
 </view>

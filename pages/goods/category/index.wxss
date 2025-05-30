@@ -1,1 +1,28 @@
-/* pages/goods/category/index.wxss */
+.container{
+  position: relative;
+}
+
+/* 渐变背景容器 */
+.gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 560rpx;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+.bar{
+  padding-top: var(--menu-top);
+  padding-right: var(--menu-right);
+}
+
+/* 内容区域 */
+.content {
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 1.6;
+  position: absolute;
+  top:var(--nav-height);
+  left: 0;
+}
