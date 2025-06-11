@@ -13,6 +13,7 @@ Page({
   },
 
   onShow: function () {
+    this.getTabBar().init();
   },
 
   // 开关切换主题
